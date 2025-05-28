@@ -1,0 +1,63 @@
+---
+options:
+  hash: m
+  attributionControl:
+    customAttribution: '<a href=".">Ultra</a> | <a
+      href="https://codeberg.org/GA-Kevin-Codes/EV-Charging-Map">Codeberg</a> |
+      <a
+      href="https://codeberg.org/GA-Kevin-Codes/EV-Charging-Map/icons">Icons</a>'
+  bounds: [ -124.848974, 24.396308, -66.885444, 49.384358 ]
+controls:
+  - type: GeolocateControl
+    options:
+      positionOptions:
+        enableHighAccuracy: true
+      trackUserLocation: true
+style:
+  extends: https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json
+  layers:
+    - type: circle
+      paint:
+        circle-color: '#0092da'
+        circle-stroke-color: white
+        circle-stroke-width: 1
+        circle-radius: 5
+    - type: symbol
+      layout:
+        icon-padding: 0
+        icon-image:
+          - concat
+          - https://codeberg.org/GA-Kevin-Codes/EV-Charging-Map/raw/branch/main/icons/
+          - - match
+            - - case
+              - - has
+                - network
+              - - get
+                - network
+              - default
+            - - ChargePoint
+              - chargepoint
+              - ChargePoint Network
+            - chargepoint
+            - - IONNA
+            - ionna
+            - - EVgo
+              - evgo
+              - EVgo Network
+            - evgo
+            - - Tesla
+              - tesla
+              - Tesla Supercharger
+              - Supercharger
+            - tesla
+            - default
+          - .png
+
+---
+
+[out:json][timeout:800];
+rel(148838);map_to_area->.usa;
+(
+  nwr[network][amenity=charging_station](area.usa);
+);
+out center;
