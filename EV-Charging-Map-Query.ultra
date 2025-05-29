@@ -3,9 +3,9 @@ options:
   hash: m
   attributionControl:
     customAttribution: '<a href=".">Ultra</a> | <a
-      href="https://codeberg.org/GA-Kevin-Codes/EV-Charging-Map">Codeberg</a> |
+      href="https://github.com/GA-Kevin-Codes/EV-Charging-Map/blob/main/">GitHub</a> |
       <a
-      href="https://codeberg.org/GA-Kevin-Codes/EV-Charging-Map/icons">Icons</a>'
+      href="https://github.com/GA-Kevin-Codes/EV-Charging-Map/blob/main/icons">Icons</a>'
   bounds: [ -124.848974, 24.396308, -66.885444, 49.384358 ]
 controls:
   - type: GeolocateControl
@@ -33,7 +33,7 @@ style:
             - - case
               - [ "has", "network" ]
               - [ "get", "network" ]
-              - [ "get", "network" ]
+              - [ "get", "brand" ]
 
             - - ChargePoint
               - chargepoint
@@ -61,6 +61,7 @@ rel(148838);map_to_area->.searchArea;
 // determine set of schools
 (
   nwr[network][amenity=charging_station](area.searchArea);
+  nwr[brand][amenity=charging_station](area.searchArea);
 );
 
 out center;
