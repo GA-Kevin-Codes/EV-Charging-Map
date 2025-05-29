@@ -88,6 +88,11 @@ style:
             - - Circle K
               - Circle K Charging
             - circlek
+
+            - - Clipper Creek
+              - Clippercreek
+              - ClipperCreek
+            - clippercreek
             
             - default
           - .png
