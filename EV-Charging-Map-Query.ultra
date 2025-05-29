@@ -69,6 +69,11 @@ style:
               - electrify america
               - EA
             - electrifyamerica
+
+            - - WattZilla
+              - Watzilla
+              - Wattzilla
+            - wattzilla
             
             - default
           - .png
