@@ -51,6 +51,7 @@ style:
             
             - - EVgo
               - evgo
+              - eVgo
             - evgo
             
             - default
