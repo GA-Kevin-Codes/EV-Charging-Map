@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 # Set folder and target size
-input_folder = "/home/kevin/EV-map"
+input_folder = "/path/to/folder"
 output_folder = input_folder
 target_size = (100, 100)  # Width x Height
 
