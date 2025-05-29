@@ -68,6 +68,7 @@ style:
             - - Electrify America
               - electrify america
               - EA
+              - electrify
             - electrifyamerica
 
             - - WattZilla
@@ -97,6 +98,11 @@ style:
             - - OpConnect
               - OPConnect
             - opconnect
+
+            - - Shell Recharge
+              - Shell
+              - Volta
+            - shell
             
             - default
           - .png
