@@ -53,6 +53,21 @@ style:
               - evgo
               - eVgo
             - evgo
+
+            - - flo
+              - FLO
+              - Flo
+            - flo
+
+            - - Blink
+              - Blink Charging
+              - Blink Network
+            - blink
+
+            - - Electrify America
+              - electrify america
+              - EA
+            - electrifyamerica
             
             - default
           - .png
