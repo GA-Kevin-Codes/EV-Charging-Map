@@ -78,6 +78,16 @@ style:
             - - Leviton
               - leviton
             - leviton
+
+            - - AmpedUp!
+              - AmpedUp
+              - Amped Up!
+              - Amped Up
+            - ampedup
+
+            - - Circle K
+              - Circle K Charging
+            - circlek
             
             - default
           - .png
