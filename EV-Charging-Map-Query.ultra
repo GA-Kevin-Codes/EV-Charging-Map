@@ -3,9 +3,9 @@ options:
   hash: m
   attributionControl:
     customAttribution: '<a href=".">Ultra</a> | <a
-      href="https://github.com/GA-Kevin-Codes/EV-Charging-Map">Codeberg</a> |
+      href="https://codeberg.org/GA-Kevin-Codes/EV-Charging-Map">Codeberg</a> |
       <a
-      href="https://github.com/GA-Kevin-Codes/EV-Charging-Map/tree/main/icons">Icons</a>'
+      href="https://codeberg.org/GA-Kevin-Codes/EV-Charging-Map/icons">Icons</a>'
   bounds: [ -124.848974, 24.396308, -66.885444, 49.384358 ]
 controls:
   - type: GeolocateControl
@@ -20,44 +20,47 @@ style:
       paint:
         circle-color: '#0092da'
         circle-stroke-color: white
-        circle-stroke-width: 1
+        circle-stroke-width: 3
         circle-radius: 5
     - type: symbol
       layout:
         icon-padding: 0
+        icon-size: .25
         icon-image:
           - concat
-          - https://github.com/GA-Kevin-Codes/EV-Charging-Map/tree/main/icons
+          - https://raw.githubusercontent.com/GA-Kevin-Codes/EV-Charging-Map/refs/heads/main/icons/
           - - match
             - - case
-              - - has
-                - network
-              - - get
-                - network
-              - default
+              - [ "has", "network" ]
+              - [ "get", "network" ]
+              - [ "get", "network" ]
+
             - - ChargePoint
               - chargepoint
               - ChargePoint Network
             - chargepoint
+
             - - IONNA
             - ionna
-            - - EVgo
-              - evgo
-              - EVgo Network
-            - evgo
+            
             - - Tesla
-              - tesla
               - Tesla Supercharger
               - Supercharger
+              - Tesla Destination
             - tesla
+            
+            - - EVgo
+              - evgo
+            - evgo
+            
             - default
           - .png
-
 ---
-
 [out:json][timeout:800];
-rel(148838);map_to_area->.usa;
+rel(148838);map_to_area->.searchArea;
+// determine set of schools
 (
-  nwr[network][amenity=charging_station](area.usa);
+  nwr[network][amenity=charging_station](area.searchArea);
 );
+
 out center;
