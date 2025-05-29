@@ -74,6 +74,10 @@ style:
               - Watzilla
               - Wattzilla
             - wattzilla
+
+            - - Leviton
+              - leviton
+            - leviton
             
             - default
           - .png
