@@ -102,6 +102,7 @@ style:
             - - Shell Recharge
               - Shell
               - Volta
+              - volta
             - shell
             
             - default
