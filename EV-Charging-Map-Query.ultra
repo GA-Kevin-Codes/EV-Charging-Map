@@ -105,6 +105,10 @@ style:
               - Volta
               - volta
             - shell
+
+            - - Thomasville, Georgia
+              - City of Thomasville
+            - thomasville
             
             - default
           - .png
